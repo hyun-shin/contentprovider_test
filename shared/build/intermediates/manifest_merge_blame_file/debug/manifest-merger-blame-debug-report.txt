@@ -1,0 +1,18 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.inittest.shared" >
+4
+5    <uses-sdk android:minSdkVersion="28" />
+6
+7    <application android:appCategory="audio" >
+7-->C:\Users\shinh\AndroidStudioProjects\inittest\shared\src\main\AndroidManifest.xml:3:5-9:19
+7-->C:\Users\shinh\AndroidStudioProjects\inittest\shared\src\main\AndroidManifest.xml:3:18-45
+8        <meta-data
+8-->C:\Users\shinh\AndroidStudioProjects\inittest\shared\src\main\AndroidManifest.xml:5:9-7:59
+9            android:name="com.google.android.gms.car.application"
+9-->C:\Users\shinh\AndroidStudioProjects\inittest\shared\src\main\AndroidManifest.xml:6:13-66
+10            android:resource="@xml/automotive_app_desc" />
+10-->C:\Users\shinh\AndroidStudioProjects\inittest\shared\src\main\AndroidManifest.xml:7:13-56
+11    </application>
+12
+13</manifest>
