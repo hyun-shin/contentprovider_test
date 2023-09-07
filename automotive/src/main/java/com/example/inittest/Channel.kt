@@ -9,8 +9,7 @@ class Channel {
         const val COLUMN_NAME = "name"
 
         val CHANNELS = arrayOf(
-            "Abbaye de Belloc", "Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
-            "Babybel", "Baguette Laonnaise", "Bakers", "Baladi", "Balaton", "Bandal", "Banon"
+            "Channel1", "Channel2", "Channel3", "Channel4", "Channel5"
         )
     }
 }

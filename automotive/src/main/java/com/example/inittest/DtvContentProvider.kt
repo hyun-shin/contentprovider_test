@@ -40,7 +40,7 @@ class DtvContentProvider : ContentProvider() {
             CODE_CHANNEL_DIR, CODE_CHANNEL_ITEM -> {
                 val queryBuilder = SQLiteQueryBuilder()
                 queryBuilder.tables = Channel.TABLE_NAME
-                val db = SampleDatabase.getInstance(context!!)
+                val db = ChannelDatabase.getInstance(context!!)
                 val cursor = queryBuilder.query(
                     db, projection, selection, selectionArgs, null, null, sortOrder)
                 cursor.setNotificationUri(context!!.contentResolver, uri)
@@ -55,7 +55,7 @@ class DtvContentProvider : ContentProvider() {
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
         return when (uriMatcher.match(uri)) {
             CODE_CHANNEL_DIR -> {
-                val id = SampleDatabase.getInstance(context!!)
+                val id = ChannelDatabase.getInstance(context!!)
                     .insert(Channel.TABLE_NAME, null, values)
                 val insertedUri = ContentUris.withAppendedId(uri, id)
                 context!!.contentResolver.notifyChange(insertedUri, null)
@@ -78,7 +78,7 @@ class DtvContentProvider : ContentProvider() {
             }
             CODE_CHANNEL_ITEM -> {
                 val id = ContentUris.parseId(uri)
-                val count = SampleDatabase.getInstance(context!!)
+                val count = ChannelDatabase.getInstance(context!!)
                     .update(Channel.TABLE_NAME, values, "${Channel.COLUMN_ID} = ?",
                         arrayOf(id.toString()))
                 context!!.contentResolver.notifyChange(uri, null)
@@ -97,7 +97,7 @@ class DtvContentProvider : ContentProvider() {
             }
             CODE_CHANNEL_ITEM -> {
                 val id = ContentUris.parseId(uri)
-                val count = SampleDatabase.getInstance(context!!)
+                val count = ChannelDatabase.getInstance(context!!)
                     .delete(Channel.TABLE_NAME,
                         "${Channel.COLUMN_ID} = ?",
                         arrayOf(id.toString()))

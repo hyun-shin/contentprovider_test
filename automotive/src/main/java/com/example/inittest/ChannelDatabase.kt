@@ -4,7 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class SampleDatabase {
+class ChannelDatabase {
     companion object {
         private const val DATABASE_NAME = "channel.db"
         private const val DATABASE_VERSION = 1

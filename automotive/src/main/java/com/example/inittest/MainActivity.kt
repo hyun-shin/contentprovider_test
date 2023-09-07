@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
 
     fun addItem(view: View) {
         val values = ContentValues()
-        values.put(Channel.COLUMN_NAME, "New Item")
+        values.put(Channel.COLUMN_NAME, "New Channel")
         val uri = contentResolver.insert(DtvContentProvider.URI_CHANNEL, values)
         Log.d(TAG, "Added item: $uri")
     }
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
         if (uri != null) {
             Log.d(TAG, "Update item: $uri")
             val values = ContentValues()
-            values.put(Channel.COLUMN_NAME, "Updated Item")
+            values.put(Channel.COLUMN_NAME, "Updated Channel")
             contentResolver.update(uri, values, null, null)
         }
     }
